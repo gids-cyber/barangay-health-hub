@@ -12,12 +12,12 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  base: '/barangay-health-hub',
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: '/barangay-health-hub/',
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
-  },
+    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"]
+  }
 }));
